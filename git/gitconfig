@@ -1,0 +1,30 @@
+[user]
+	email = f0i.git@projects.f0i.de
+	name = f0i
+[core]
+	excludesfile = ~/.gitignore
+[merge]
+	tool = vimdiff
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+  ui = auto
+  interactive = auto
+[push]
+	default = simple
+[github]
+	user = f0i
+[log]
+	decorate = short
+[alias]
+  s = status
+  d = diff
+  l  = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d %C(green)%an%Creset %s %C(green)%ad - %ar%Creset' --date=short
+	la = !git l --all
+  lf = !git l --stat
+  laf = !git la --stat
+  lfa = !git laf
+  ldiff = !git l --patch
+  ladiff = !git la --patch
+  wdiff = diff --color-words
