@@ -20,7 +20,8 @@
 [alias]
   s = status
   d = diff
-  l  = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d %C(green)%an%Creset %s %C(green)%ad - %ar%Creset' --date=short
+  b = branch
+  l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d %C(green)%an%Creset %s %C(green)%ad - %ar%Creset' --date=short
 	la = !git l --all
   lf = !git l --stat
   laf = !git la --stat
