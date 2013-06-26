@@ -1,3 +1,6 @@
 [submodule "zsh/ohmyzsh"]
 	path = zsh/ohmyzsh
 	url = git@github.com:robbyrussell/oh-my-zsh
+[submodule "git/gitignore"]
+	path = git/gitignore
+	url = git@github.com:f0i/gitignore

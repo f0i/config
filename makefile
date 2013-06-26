@@ -2,6 +2,8 @@
 
 all: bash zsh vim git mutt awesome
 
+update: gitignore
+
 bash:
 	ln -s ~/config/bash/bashrc ~/.bashrc
 
@@ -12,8 +14,11 @@ zsh:
 vim:
 	ln -s ~/config/vim/vimrc ~/.vimrc	
 
-git:
+git: gitignore
 	ln -s ~/config/git/gitconfig ~/.gitconfig
+
+gitignore:
+	cd ~/config/git/gitignore/Global && ./generate.sh
 
 mutt:
 	mkdir -p ~/.mutt/
