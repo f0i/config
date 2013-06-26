@@ -1,9 +1,13 @@
-.PHONY: all bash vim git mutt awesome
+.PHONY: all bash zsh vim git mutt awesome
 
-all: bash vim git mutt awesome
+all: bash zsh vim git mutt awesome
 
 bash:
 	ln -s ~/config/bash/bashrc ~/.bashrc
+
+zsh:
+	ln -s ~/config/zsh/zshrc ~/.zshrc
+	ln -s ~/config/zsh/zshenv ~/.zshenv
 
 vim:
 	ln -s ~/config/vim/vimrc ~/.vimrc	
