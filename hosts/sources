@@ -1,0 +1,24 @@
+# Sources from https://code.google.com/p/ad-away/wiki/HostsSources (Mar 29, 2013)
+#
+# Host files
+#
+http://winhelp2002.mvps.org/hosts.txt
+http://hosts-file.net/ad_servers.asp
+http://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext
+http://adaway.sufficientlysecure.org/hosts.txt
+#http://www.ismeh.com/HOSTS
+#http://sysctl.org/cameleon/hosts
+#http://rlwpx.free.fr/WPFF/hosts.htm
+#http://someonewhocares.org/hosts/hosts
+#http://www.malwaredomainlist.com/hostslist/hosts.txt
+#http://securemecca.com/Downloads/hosts.txt
+#http://www.hostsfile.org/Downloads/hosts.txt
+#http://adblock.gjtech.net/?format=hostfile
+#https://jansal.googlecode.com/svn/trunk/adblock/hosts
+#https://sites.google.com/site/logroid/files/hosts.txt
+##
+## Redirection List
+##
+#https://smarthosts.googlecode.com/svn/trunk/mobile_devices/hosts
+#https://veryhost.googlecode.com/files/android.txt
+#https://hostsx.googlecode.com/svn/trunk/hosts
