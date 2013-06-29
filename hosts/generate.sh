@@ -10,9 +10,14 @@ echo "# Generated file
 
 " > $hosts
 
-# My hosts file
-cat hosts >> $hosts
+# My hosts files
+cat ./hosts.localhost >> $hosts
+cat ./hosts.dhcp >> $hosts
+cat ./hosts.local >> $hosts
+cat ./hosts.server >> $hosts
+cat ./hosts.vgu >> $hosts
 
+# Ad block
 cat $src/hosts.* | \
   egrep -e "^127\.0\.0\.1" -e "^0\.0\.0\.0" | \
   sed "s/^127\.0\.0\.1/0.0.0.0/" | \
