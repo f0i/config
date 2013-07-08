@@ -1,0 +1,28 @@
+#!/bin/bash
+
+function _timer_start {
+timer=${timer:-$SECONDS}
+  }
+
+  function _timer_stop {
+  _timer_show=$(($SECONDS - $timer))
+  unset timer
+}
+
+trap '_timer_start' DEBUG
+PROMPT_COMMAND='_timer_stop'
+
+PS1='${_timer_show}:$?:\w$ '
+
+# Add color
+PS1="\[\033[0;32m\]$PS1\[\033[00m\]"
+
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+shopt -s autocd
+shopt -s checkwinsize
+
+
+# This loads RVM into a shell session.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias wq='clear'
+alias namp='sl'
+alias qw='sl'
+alias whois='whois --verbose -H'
+alias man='man -a'
+alias vless='vimpager'
+alias presentation="$TERMINAL -fn 'xft:DejaVu Sans Mono-15'"
+alias presentation-white="$TERMINAL -fn 'xft:DejaVu Sans Mono-15' -bg white -fg black"
+alias wifi-status="iwconfig 2>/dev/null|grep Signal|sed 's/^\s*//';[ \$? -ne 0 ]&&echo No Signal"
+alias bmplayer="mplayer -ao alsa:device=bluetooth"
+alias qr='ttyqr -b'
+alias v='vim'
+alias g='git'
+alias m='mutt'
+alias tunlr='cp /etc/resolv.conf.tunlr /etc/resolv.conf'
+alias rm="echo Delete\! CTRL-C to cancel, enter to delete\!;read&&rm"
+alias commit-bs="git commit -a -m \`curl -s -L http://whatthecommit.com/index.txt\`"
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
