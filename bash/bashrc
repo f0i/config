@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. ~/.alias
+
 function _timer_start {
 timer=${timer:-$SECONDS}
   }
