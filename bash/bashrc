@@ -3,21 +3,26 @@
 . ~/.alias
 
 function _timer_start {
-timer=${timer:-$SECONDS}
-  }
-
-  function _timer_stop {
-  _timer_show=$(($SECONDS - $timer))
-  unset timer
+  _timer=${_timer:-$SECONDS}
 }
 
-trap '_timer_start' DEBUG
+function _timer_stop {
+  _timer_show=$(($SECONDS - $_timer))
+  unset _timer
+}
+
+trap '__=$_; _timer_start; : "$__"' DEBUG
 PROMPT_COMMAND='_timer_stop'
 
-PS1='${_timer_show}:$?:\w$ '
+PS1='${_timer_show}:$?:\w\$ '
 
 # Add color
-PS1="\[\033[0;32m\]$PS1\[\033[00m\]"
+if [[ $EUID -eq 0 ]]
+then
+  PS1="\[\033[0;91m\]$PS1\[\033[00m\]"
+else
+  PS1="\[\033[0;32m\]$PS1\[\033[00m\]"
+fi
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
