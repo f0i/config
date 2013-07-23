@@ -1,0 +1,18 @@
+URxvt.perl-ext-common: default,tabbed,matcher
+URxvt.url-launcher: firefox
+URxvt.matcher.button: 1
+URxvt.keysym.C-Delete: perl:matcher:last
+URxvt.keysym.M-Delete: perl:matcher:list
+URxvt.tabbed.tabbar-fg: 4
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 1
+URxvt.tabbed.tab-bg: 0
+URxvt.transparent: true
+URxvt.tintColor: #000000
+URxvt.shading: 10
+urxvt*termName: rxvt-256color
+URxvt.saveLines: 10000
+*background: black
+*foreground: gold
+
+Xft.dpi: 100

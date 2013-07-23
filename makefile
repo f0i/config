@@ -1,6 +1,6 @@
-.PHONY: all bash zsh vim git mutt awesome hosts
+.PHONY: all bash zsh vim git mutt awesome hosts x
 
-all: bash zsh vim git mutt awesome hosts
+all: bash zsh vim git mutt awesome hosts x
 
 update: gitignore hosts
 
@@ -41,3 +41,6 @@ awesome:
 hosts:
 	cd ./hosts && ./get-hosts.sh
 	cd ./hosts && ./generate.sh
+
+x:
+	ln -si ${PWD}/x/xdefaults ~/.Xdefaults
