@@ -21,7 +21,9 @@ zsh: alias
 vim:
 	ln -si ${PWD}/vim/vimrc ~/.vimrc	
 
-git: gitignore
+git: gitignore gitconfig
+
+gitconfig:
 	ln -si ${PWD}/git/gitconfig ~/.gitconfig
 
 gitignore:
