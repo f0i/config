@@ -18,7 +18,7 @@ alias g='git'
 alias m='mutt'
 alias tunlr='cp /etc/resolv.conf.tunlr /etc/resolv.conf'
 alias rm="echo Delete\! CTRL-C to cancel, enter to delete\!;read&&rm"
-alias commit-bs="git commit -a -m \`curl -s -L http://whatthecommit.com/index.txt\`"
+alias wtc="curl -s -L http://whatthecommit.com/index.txt"
 
 alias ..='cd ..'
 alias ...='cd ../..'

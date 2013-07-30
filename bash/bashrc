@@ -4,11 +4,21 @@
 
 function _timer_start {
   _timer=${_timer:-$SECONDS}
+  let _timer_start_count+=1
 }
 
 function _timer_stop {
   _timer_show=$(($SECONDS - $_timer))
+  _idle_timer_show=$(($SECONDS - $_idle_timer))
+
+  if [ $_timer_start_count -eq 1 ]
+  then
+    _timer_show=$_idle_timer_show
+  fi
+  _idle_timer=${SECONDS}
+
   unset _timer
+  unset _timer_start_count
 }
 
 trap '__=$_; _timer_start; : "$__"' DEBUG
