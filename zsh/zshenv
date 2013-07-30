@@ -1,7 +1,0 @@
-typeset -U path
-path=(~/bin $path)
-
-export TERMINAL="urxvt"
-export VISUAL="vim"
-export EDITOR="vim"
-export PAGER="less -XF"

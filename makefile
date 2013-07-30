@@ -1,6 +1,6 @@
-.PHONY: all bash zsh vim git mutt awesome hosts x
+.PHONY: all bash vim git mutt awesome hosts x
 
-all: bash zsh vim git mutt awesome hosts x
+all: bash vim git mutt awesome hosts x
 
 update: gitignore hosts
 
@@ -13,10 +13,6 @@ alias:
 
 env:
 	ln -si ${PWD}/bash/env ~/.env
-
-zsh: alias
-	ln -si ${PWD}/zsh/zshrc ~/.zshrc
-	ln -si ${PWD}/zsh/zshenv ~/.zshenv
 
 vim:
 	ln -si ${PWD}/vim/vimrc ~/.vimrc	
