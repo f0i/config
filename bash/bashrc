@@ -4,6 +4,7 @@
 
 function _timer_start {
   _timer=${_timer:-$SECONDS}
+  _idle_timer=${_idle_timer:-$SECONDS}
   let _timer_start_count+=1
 }
 
