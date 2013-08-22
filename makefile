@@ -12,6 +12,7 @@ alias:
 	ln -si ${PWD}/bash/alias ~/.alias
 
 env:
+	if [ ! -e bash/env ];	then cp bash/env.template bash/env; fi
 	ln -si ${PWD}/bash/env ~/.env
 
 vim:
