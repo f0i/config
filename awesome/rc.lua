@@ -364,9 +364,9 @@ globalkeys = awful.util.table.join(globalkeys, awful.key({ modkey }, "#" .. 10 +
 function ()
   local screen = mouse.screen
   local tags = awful.tag.gettags(screen)
-  awful.client.viewonly(tags[1])
+  awful.tag.viewonly(tags[1])
   for i = 2, 9 do
-    awful.client.viewtoggle(tags[i])
+    awful.tag.viewtoggle(tags[i])
   end
 end))
 
