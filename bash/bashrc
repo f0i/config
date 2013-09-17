@@ -28,11 +28,20 @@ PROMPT_COMMAND='_timer_stop'
 PS1='${_timer_show}:$?:\w\$ '
 
 # Add color
-if [[ $EUID -eq 0 ]]
+if [[ "$HOSTNAME" -eq "mt" ]]
 then
-  PS1="\[\033[0;91m\]$PS1\[\033[00m\]"
+  # local user
+  if [[ "$EUID" -eq "0" ]]
+  then
+    # root: red
+    PS1="\[\033[0;91m\]$PS1\[\033[00m\]"
+  else
+    # other: green
+    PS1="\[\033[0;32m\]$PS1\[\033[00m\]"
+  fi
 else
-  PS1="\[\033[0;32m\]$PS1\[\033[00m\]"
+  # remote user: blue
+  PS1="\[\033[0;96m\]$PS1\[\033[00m\]"
 fi
 
 bind '"\e[A": history-search-backward'
