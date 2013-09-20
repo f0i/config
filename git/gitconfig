@@ -19,15 +19,17 @@
 	decorate = short
 [alias]
   s = status
-  d = diff
+  p = diff
   b = branch
   l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d %C(green)%an%Creset %s %C(green)%ad - %ar%Creset' --date=short
 	la = !git l --all
   lf = !git l --stat
   laf = !git la --stat
   lfa = !git laf
-  ldiff = !git l --patch
-  lwdiff = !git ldiff --color-words
-  ladiff = !git la --patch
-  lawdiff = !git ladiff --color-word
-  wdiff = diff --color-words
+  lp = !git l --patch
+  lp1 = !git lp -1
+  lp2 = !git lp -2
+  lwp = !git lp --color-words
+  lap = !git la --patch
+  lawp = !git lap --color-word
+  wp = diff --color-words
