@@ -5,7 +5,6 @@ alias v='vim'
 alias g='git'
 alias m='mutt'
 alias l='ls'
-alias wq='clear'
 alias ff='firefox'
 
 alias qr='ttyqr -b'
@@ -52,3 +51,5 @@ alias wtc="curl -s -L http://whatthecommit.com/index.txt"
 alias android-devicemanager="android avd"
 alias android-sdkmanager="android sdk"
 
+# compiler
+alias cmake-arm="cmake -DCMAKE_TOOLCHAIN_FILE=~/projects/arm/toolchain.cmake -DCMAKE_INSTALL_PREFIX=/opt/arm"
