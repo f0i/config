@@ -18,6 +18,7 @@ alias echo-='echo "$OLDPWD"'
 alias echo_='echo "$_"'
 alias wget_='wget "$_"'
 alias vim_='vim "$_"'
+alias ff_='firefox "$_"'
 
 alias ..='cd ..'
 alias ...='cd ../..'
