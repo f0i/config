@@ -18,6 +18,7 @@ alias echo-='echo "$OLDPWD"'
 alias echo_='echo "$_"'
 alias wget_='wget "$_"'
 alias vim_='vim "$_"'
+alias cat_='cat "$_"'
 alias ff_='firefox "$_"'
 
 alias ..='cd ..'
@@ -47,6 +48,8 @@ alias tunlr='cp /etc/resolv.conf.tunlr /etc/resolv.conf'
 alias tunlr-off='cp /etc/resolv.conf.google /etc/resolv.conf'
 
 alias wtc="curl -s -L http://whatthecommit.com/index.txt"
+
+alias nocolor='sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"'
 
 # android
 alias android-devicemanager="android avd"
