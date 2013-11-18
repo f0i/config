@@ -34,3 +34,4 @@
   lawp = !git lap --color-word
   wp = diff --color-words
   wdiff = diff --color-words
+  ls = ls-files
