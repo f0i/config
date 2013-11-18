@@ -395,6 +395,7 @@ awful.rules.rules = {
 	-- 1 sh
 	-- 2 www
     { rule = { class = "Firefox"      }, properties = { tag = tags[ left_screen][2] } },
+    { rule = { class = "Chromium"     }, properties = { tag = tags[ left_screen][2] } },
     { rule = { class = "Namoroka"     }, properties = { tag = tags[ left_screen][2] } },
     { rule = { class = "Epiphany"     }, properties = { tag = tags[right_screen][2] } },
     { rule = { class = "Uzbl"         }, properties = { tag = tags[ left_screen][2] } },
