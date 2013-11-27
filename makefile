@@ -4,7 +4,7 @@ all: bash vim git mutt awesome hosts x
 
 update: gitignore hosts
 
-bash: alias env
+bash: alias env bash_private
 	ln -si /bash/profile ~/.bash_profile
 	ln -si ${PWD}/bash/bashrc ~/.bashrc
 
@@ -12,11 +12,16 @@ alias:
 	ln -si ${PWD}/bash/alias ~/.alias
 
 env:
-	if [ ! -e bash/env ];	then cp bash/env.template bash/env; fi
+	if [ ! -e bash/env ]; then cp bash/env.template bash/env; fi
 	ln -si ${PWD}/bash/env ~/.env
 
+bash_private:
+	if [ ! -e bash/private ]; then cp bash/private.template bash/private; fi
+	ln -si ${PWD}/bash/private ~/.bash_private
+
 vim:
-	ln -si ${PWD}/vim/vimrc ~/.vimrc	
+	ln -si ${PWD}/vim/vimrc ~/.vimrc
+	ln -si ${PWD}/vim/conf ~/.vim/f0i
 
 git: gitignore gitconfig
 

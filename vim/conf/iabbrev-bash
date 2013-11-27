@@ -1,0 +1,5 @@
+" scripting
+:iabbrev bashstart #!/bin/bash<CR><CR>
+:iabbrev shstart #!/bin/bash<CR><CR>
+
+" vim: set syntax=vim:

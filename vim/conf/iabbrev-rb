@@ -1,0 +1,14 @@
+" ruby script
+:iabbrev rbstart #!/usr/bin/env ruby<CR><CR>
+
+" rails tags
+:iabbrev rt <%
+:iabbrev rgt <%=
+:iabbrev ret %>
+:iabbrev rif <% if
+:iabbrev relse <% else %>
+:iabbrev rend <% end %>
+:iabbrev rttag <%= t '' %><Left><Left><Left><Left>
+
+
+" vim: set syntax=vim:

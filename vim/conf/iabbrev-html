@@ -1,0 +1,103 @@
+" html tags
+:iabbrev htmltag <html>
+:iabbrev htmlendtag </html>
+:iabbrev htmlblock <html><CR><head><CR></head><CR><body><CR><CR></body><CR></html><Up><Up>
+
+:iabbrev headtag <head>
+:iabbrev headendtag </head>
+:iabbrev headblock <head><CR></head>
+
+:iabbrev brtag <br/>
+:iabbrev hrtag <hr/>
+
+:iabbrev ptag <p>
+:iabbrev pendtag </p>
+:iabbrev pblock <p></p>
+
+:iabbrev btag <b>
+:iabbrev bendtag </b>
+:iabbrev pblock <b></b>
+
+" form tags
+:iabbrev formblock <form><CR></form><UP><Left>
+:iabbrev formtag <form><Left>
+:iabbrev formendtag </form>
+:iabbrev buttontag <button></button><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+:iabbrev checkboxtag <input type="checkbox" />
+:iabbrev inputtag <input type="text" />
+:iabbrev passwordtag <input type="password"/>
+
+" table tags
+:iabbrev tabletag <table>
+:iabbrev tableendtag </table>
+:iabbrev tableblock <table><CR><CR></table><Up>
+
+:iabbrev thtag <th>
+:iabbrev thendtag </th>
+:iabbrev thblock <th></th>
+
+:iabbrev tdtag <td>
+:iabbrev tdendtag </td>
+:iabbrev tdblock <td></td><Left><Left><Left><Left><Left>
+
+:iabbrev trtag <tr>
+:iabbrev trendtag </tr>
+:iabbrev trblock <tr><CR><CR></tr><Up>
+
+:iabbrev ultag <ul>
+:iabbrev ulendtag </ul>
+:iabbrev ulblock <ul><CR><CR></ul><Up>
+
+:iabbrev oltag <ol>
+:iabbrev olendtag </ol>
+:iabbrev olblock <ol><CR><CR></ol><Up>
+
+:iabbrev litag <li>
+:iabbrev liendtag </li>
+:iabbrev liblock <li></li><Left><Left><Left><Left><Left>
+
+" heading tags
+:iabbrev h1block <h1></h1><Left><Left><Left><Left><Left>
+:iabbrev h2block <h2></h2><Left><Left><Left><Left><Left>
+:iabbrev h3block <h3></h3><Left><Left><Left><Left><Left>
+:iabbrev h4block <h4></h4><Left><Left><Left><Left><Left>
+:iabbrev h5block <h5></h5><Left><Left><Left><Left><Left>
+:iabbrev h6block <h6></h6><Left><Left><Left><Left><Left>
+
+:iabbrev h1tag <h1>
+:iabbrev h2tag <h2>
+:iabbrev h3tag <h3>
+:iabbrev h4tag <h4>
+:iabbrev h5tag <h5>
+:iabbrev h6tag <h6>
+
+:iabbrev h1endtag </h1>
+:iabbrev h2endtag </h2>
+:iabbrev h3endtag </h3>
+:iabbrev h4endtag </h4>
+:iabbrev h5endtag </h5>
+:iabbrev h6endtag </h6>
+
+" others
+:iabbrev linktag <a href=""></a><Left><Left><Left><Left><Left><Left>
+:iabbrev csstag <link rel="stylesheet" type="text/css" href="" /><Left><Left><Left><Left>
+:iabbrev jstag <script type="text/javascript" src=""></script><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+
+:iabbrev divtag <div>
+:iabbrev divendtag </div>
+:iabbrev divblock <div></div><Left><Left><Left><Left><Left><Left>
+
+:iabbrev pretag <pre>
+:iabbrev preendtag </pre>
+:iabbrev preblock <pre></pre><Left><Left><Left><Left><Left><Left>
+
+:iabbrev spantag <span>
+:iabbrev spanendtag </span>
+:iabbrev spanblock <span></span><Left><Left><Left><Left><Left><Left><Left>
+
+:iabbrev scripttag <script>
+:iabbrev scriptendtag </script>
+:iabbrev scriptblock <script></script><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+
+
+" vim: set syntax=vim:

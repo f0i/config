@@ -1,0 +1,11 @@
+" javascript
+:iabbrev documentready $(function() {<CR> <CR>});<Up>
+:iabbrev jsfn function() {<CR> <CR>};<Up>
+
+" coffeescript
+
+" handlebars
+:iabbrev {{ {{}}<Left><Left>
+
+
+" vim: set syntax=vim:

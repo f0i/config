@@ -20,6 +20,7 @@ alias wget_='wget "$_"'
 alias vim_='vim "$_"'
 alias cat_='cat "$_"'
 alias ff_='firefox "$_"'
+alias ._='. "$_"'
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -31,10 +32,12 @@ alias grep='grep --color=auto'
 alias rm="echo -n Delete\! CTRL-C to cancel, enter to delete\!;read&&rm"
 alias whois='whois --verbose -H'
 alias man='man -a'
+alias mplayer-loud='mplayer -softvol -softvol-max 1000 −af volume=10.1:0'
 
 #typos
-alias namp='sl'
-alias qw='sl'
+alias namp='nmap'
+alias qw='wq'
+alias sl='ls'
 
 #others
 alias presentation="$TERMINAL -fn 'xft:DejaVu Sans Mono-15'"
@@ -50,6 +53,8 @@ alias tunlr-off='cp /etc/resolv.conf.google /etc/resolv.conf'
 alias wtc="curl -s -L http://whatthecommit.com/index.txt"
 
 alias nocolor='sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"'
+alias duh='du -hs * | sort -h && du -hs .'
+alias duha='du -hs .[!.]* * | sort -h && du -hs .'
 
 # android
 alias android-devicemanager="android avd"
