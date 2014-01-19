@@ -21,6 +21,8 @@ alias vim_='vim "$_"'
 alias cat_='cat "$_"'
 alias ff_='firefox "$_"'
 alias ._='. "$_"'
+alias ls_='ls "$_"'
+alias gqview_='gqview "$_"'
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -38,6 +40,7 @@ alias mplayer-loud='mplayer -softvol -softvol-max 1000 −af volume=10.1:0'
 alias namp='nmap'
 alias qw='wq'
 alias sl='ls'
+alias ks='ls'
 
 #others
 alias presentation="$TERMINAL -fn 'xft:DejaVu Sans Mono-15'"
