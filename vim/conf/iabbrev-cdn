@@ -5,8 +5,8 @@
 
 :iabbrev semanticuitag <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.9.3/javascript/semantic.js"></script><CR><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.9.3/css/semantic.css" /><CR>
 
-:iabbrev bootstraptag <link href="https://netdna.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"><CR><script src="//netdna.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
+:iabbrev bootstraptag <link href="https://netdna.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet"><CR><script src="https://netdna.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
 
-:iabbrev fontawesometag <link href="//netdna.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+:iabbrev fontawesometag <link href="https://netdna.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 
 " vim: set syntax=vim:
