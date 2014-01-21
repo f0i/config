@@ -1,6 +1,7 @@
 [user]
 	email = f0i.git@projects.f0i.de
 	name = f0i
+	signingkey = 19810A7F
 [core]
 	excludesfile = ~/.gitignore
 [merge]
@@ -21,7 +22,7 @@
   s = status
   p = diff
   b = branch
-  l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d %C(green)%an%Creset %s %C(green)%ad - %ar%Creset' --date=short
+  l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d %C(green)%an %G?%Creset %s %C(green)%ad - %ar%Creset' --date=short
 	la = !git l --all
   lf = !git l --stat
   laf = !git la --stat
