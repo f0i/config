@@ -5,7 +5,7 @@ all: bash vim git mutt awesome hosts x
 update: gitignore hosts
 
 bash: alias env bash_private
-	ln -si /bash/profile ~/.bash_profile
+	ln -si ${PWD}/bash/profile ~/.bash_profile
 	ln -si ${PWD}/bash/bashrc ~/.bashrc
 
 alias:
