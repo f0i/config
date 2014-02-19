@@ -56,8 +56,6 @@ alias tunlr-off='cp /etc/resolv.conf.google /etc/resolv.conf'
 alias wtc="curl -s -L http://whatthecommit.com/index.txt"
 
 alias nocolor='sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"'
-alias duh='du -hs * | sort -h && du -hs .'
-alias duha='du -hs .[!.]* * | sort -h && du -hs .'
 alias dfh='df -H'
 
 # android

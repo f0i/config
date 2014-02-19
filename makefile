@@ -48,3 +48,8 @@ hosts:
 
 x:
 	ln -si ${PWD}/x/xdefaults ~/.Xdefaults
+
+privacy:
+	rm -ri ~/.adobe ~/.macromedia
+	ln -si /dev/null ~/.adobe
+	ln -si /dev/null ~/.macromedia
