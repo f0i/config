@@ -281,7 +281,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
 
     -- {{{ Prompt
-    awful.key({ modkey }, "r", function () mypromptbox[mouse.screen]:run() end),
+    awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
 
     -- {{{ Custom program
 	-- scrot
@@ -345,16 +345,20 @@ for i = 1, 9 do
                   end),
         awful.key({ modkey, "Shift" }, "#" .. i + 9,
                   function ()
-                      local tag = awful.tag.gettags(client.focus.screen)[i]
-                      if client.focus and tag then
-                          awful.client.movetotag(tag)
+                      if client.focus then
+                          local tag = awful.tag.gettags(client.focus.screen)[i]
+                          if tag then
+                              awful.client.movetotag(tag)
+                          end
                      end
                   end),
         awful.key({ modkey, "Control", "Shift" }, "#" .. i + 9,
                   function ()
-                      local tag = awful.tag.gettags(client.focus.screen)[i]
-                      if client.focus and tag then
-                          awful.client.toggletag(tag)
+                      if client.focus then
+                          local tag = awful.tag.gettags(client.focus.screen)[i]
+                          if tag then
+                              awful.client.toggletag(tag)
+                          end
                       end
                   end))
 end
@@ -362,11 +366,13 @@ end
 -- all tags with key '0'
 globalkeys = awful.util.table.join(globalkeys, awful.key({ modkey }, "#" .. 10 + 9,
 function ()
-  local screen = mouse.screen
-  local tags = awful.tag.gettags(screen)
-  awful.tag.viewonly(tags[1])
-  for i = 2, 9 do
-    awful.tag.viewtoggle(tags[i])
+  if client.focus then
+    local screen = mouse.screen
+    local tags = awful.tag.gettags(screen)
+    awful.tag.viewonly(tags[1])
+    for i = 2, 9 do
+      awful.tag.viewtoggle(tags[i])
+    end
   end
 end))
 
@@ -390,7 +396,7 @@ awful.rules.rules = {
                      buttons = clientbuttons } },
 	-- floating
     { rule = { class = "MPlayer"      } , properties = { floating = true            } },
-    { rule = { class = "gimp"         } , properties = { floating = true            } },
+    { rule = { class = "Gimp"         } , properties = { floating = true            } },
 	-- Tags
 	-- 1 sh
 	-- 2 www
@@ -402,18 +408,20 @@ awful.rules.rules = {
 	-- 3 im
     { rule = { class = "Skype"        }, properties = { tag = tags[ left_screen][3] } },
     { rule = { class = "Ekiga"        }, properties = { tag = tags[ left_screen][3] } },
-    { rule = { class = "Pidgin"       }, properties = { tag = tags[right_screen][5] } },
+    { rule = { class = "Pidgin"       }, properties = { tag = tags[right_screen][3] } },
 	-- 4 file
 	-- 5 ide
-  --{ rule = { class = "NetBeans"     }, properties = { tag = tags[mouse.screen][5] } },
-  --{ rule = { class = "Eclipse"      }, properties = { tag = tags[mouse.screen][5] } },
+    { rule = { class = "NetBeans"     }, properties = { tag = tags[mouse.screen][5] } },
+    { rule = { class = "Eclipse"      }, properties = { tag = tags[mouse.screen][5] } },
 	-- 6 mail
     { rule = { class = "Thunderbird"  }, properties = { tag = tags[right_screen][6] } },
     { rule = { class = "Shredder"     }, properties = { tag = tags[right_screen][6] } },
     { rule = { class = "Liferea"      }, properties = { tag = tags[ left_screen][6] } },
     { rule = { class = "Lanikai"      }, properties = { tag = tags[ left_screen][6] } },
+    { rule = { class = "RSSOwl"       }, properties = { tag = tags[ left_screen][6] } },
 	-- 7 m
     { rule = { class = "Exaile"       }, properties = { tag = tags[ left_screen][7] } },
+    { rule = { class = "Gimp"         }, properties = { tag = tags[ left_screen][7] } },
 	-- 8 vm
     { rule = { class = "VirtualBox"   }, properties = { tag = tags[ left_screen][8] } },
 	-- 9 p2p
