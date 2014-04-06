@@ -41,6 +41,7 @@ alias namp='nmap'
 alias qw='wq'
 alias sl='ls'
 alias ks='ls'
+alias cd..='cd ..'
 
 #others
 alias presentation="$TERMINAL -fn 'xft:DejaVu Sans Mono-15'"
