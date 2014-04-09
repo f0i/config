@@ -64,4 +64,4 @@ alias android-devicemanager="android avd"
 alias android-sdkmanager="android sdk"
 
 # compiler
-alias cmake-arm="cmake -DCMAKE_TOOLCHAIN_FILE=~/projects/arm/toolchain.cmake -DCMAKE_INSTALL_PREFIX=/opt/arm"
+alias cmake-arm="cmake -DCMAKE_TOOLCHAIN_FILE=~/projects/arm/toolchain.cmake -DCMAKE_INSTALL_PREFIX=/opt/arm -DQT_LRELEASE_EXECUTABLE=/usr/bin/lrelease"
