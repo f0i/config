@@ -1,5 +1,7 @@
 .PHONY: all bash vim git mutt awesome hosts x
 
+#BUG: Symlink in folder when executing task multiple times
+
 all: bash vim git mutt awesome hosts x
 
 update: gitignore hosts
@@ -20,6 +22,7 @@ bash_private:
 	ln -si ${PWD}/bash/private ~/.bash_private
 
 vim:
+	mkdir -p ~/.vim/
 	ln -si ${PWD}/vim/vimrc ~/.vimrc
 	ln -si ${PWD}/vim/conf ~/.vim/f0i
 
@@ -48,8 +51,9 @@ hosts:
 
 x:
 	ln -si ${PWD}/x/xdefaults ~/.Xdefaults
+	ln -si ${PWD}/x/xinitrc ~/.xinitrc
 
 privacy:
-	rm -ri ~/.adobe ~/.macromedia
+	- rm -ri ~/.adobe ~/.macromedia
 	ln -si /dev/null ~/.adobe
 	ln -si /dev/null ~/.macromedia
