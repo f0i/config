@@ -1,0 +1,8 @@
+" syntax
+syntax on
+
+" mouse
+set mouse=a
+
+" load plugins
+call pathogen#infect()
