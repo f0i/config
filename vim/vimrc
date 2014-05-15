@@ -1,8 +1,24 @@
+" commands
+set showcmd
+
 " syntax
 syntax on
+filetype plugin indent on
+set hlsearch
+set incsearch
+set autoindent
+set background=dark
 
-" mouse
+" position
 set mouse=a
+set ruler
+
+" tabstop
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smarttab
 
 " load plugins
 call pathogen#infect()
+
