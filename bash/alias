@@ -23,6 +23,7 @@ alias ff_='firefox "$_"'
 alias ._='. "$_"'
 alias ls_='ls "$_"'
 alias gqview_='gqview "$_"'
+alias find_='find $_'
 
 alias ..='cd ..'
 alias ...='cd ../..'
