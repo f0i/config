@@ -1,0 +1,7 @@
+" markdown
+:iabbrev mdstart <pre><script src="/cert.js"></script><script src="https://js.f0i.de/js/md-start.js"></script><CR><CR>#
+:iabbrev mdstartic <pre><script src="/cert.js"></script><script src="https://js.f0i.de/js/md-start.js"></script><CR>![logo](https://js.f0i.de/img/ic.png)<CR><CR>#
+:iabbrev mdlink []()<Left><Left><Left>
+:iabbrev mdimg ![]()<Left><Left><Left>
+
+" vim: set syntax=vim:

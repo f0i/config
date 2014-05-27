@@ -1,0 +1,12 @@
+"indent guides
+
+let g:indent_guides_auto_colors = 0
+highlight Normal ctermbg=black
+highlight IndentGuidesEven ctermbg=232
+highlight IndentGuidesOdd  ctermbg=233
+let g:indent_guides_start_level = 1
+let g:indent_guides_guide_size = 1
+
+map <F6> :IndentGuidesToggle<CR>
+
+" vim: set syntax=vim:
