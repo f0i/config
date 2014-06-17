@@ -28,6 +28,9 @@ alias find_='find $_'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias .......='cd ../../../../../..'
 
 #params
 alias ls='ls --color=auto'
