@@ -6,6 +6,8 @@
 	excludesfile = ~/.gitignore
 [merge]
 	tool = vimdiff
+[commit]
+  gpgsign = true
 [color]
 	status = auto
 	diff = auto
