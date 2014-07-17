@@ -51,7 +51,8 @@ alias cd..='cd ..'
 alias presentation="$TERMINAL -fn 'xft:DejaVu Sans Mono-15'"
 alias presentation-white="$TERMINAL -fn 'xft:DejaVu Sans Mono-15' -bg white -fg black"
 
-alias wifi-status="iwconfig 2>/dev/null|grep Signal|sed 's/^\s*//';[ \$? -ne 0 ]&&echo No Signal"
+alias wifi-status='netctl list | grep "*";iwconfig 2>/dev/null|grep Signal|sed "s/^\s*//";[ $? -ne 0 ]&&echo No Signal'
+alias wifi='netctl switch-to'
 alias bmplayer="mplayer -ao alsa:device=bluetooth"
 alias exif-remove-rotation="exiftool -overwrite_original -m -exif:Orientation=1 -n"
 
