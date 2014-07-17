@@ -1,0 +1,4 @@
+" supertab
+let g:SuperTabDefaultCompletionType = "context"
+
+" vim: set syntax=vim:
