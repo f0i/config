@@ -38,4 +38,6 @@
   wp = diff --color-words
   wdiff = diff --color-words
   ls = ls-files
-  c = commit -vS
+  c = commit -v
+  ca = commit -av
+  stas = -c commit.gpgsign=false stash
