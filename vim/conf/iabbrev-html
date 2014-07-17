@@ -16,7 +16,7 @@
 
 :iabbrev btag <b>
 :iabbrev bendtag </b>
-:iabbrev pblock <b></b>
+:iabbrev bblock <b></b>
 
 " form tags
 :iabbrev formblock <form><CR></form><UP><Left>
