@@ -1,0 +1,20 @@
+" utf8 symbols
+:iabbrev utfbullet •
+:iabbrev utfbulletpoint •
+:iabbrev utfsnowman ☃
+:iabbrev utfcopyright ©
+:iabbrev utfcmark ©
+:iabbrev utftrademark ™
+:iabbrev utfrmark ®
+:iabbrev utfheart ♥
+:iabbrev utfyen ¥
+:iabbrev utfsum ∑
+:iabbrev utfkeyboard ⌨
+:iabbrev utfok ✓
+:iabbrev utfnotok ✗
+:iabbrev utfsmily ☺
+:iabbrev utfmale ♂
+:iabbrev utffemale ♀
+:iabbrev utfcube ⏣
+
+" vim: set syntax=vim:
