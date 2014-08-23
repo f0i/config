@@ -41,3 +41,4 @@
   c = commit -v
   ca = commit -av
   stas = -c commit.gpgsign=false stash
+  git = !git
