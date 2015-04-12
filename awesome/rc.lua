@@ -422,6 +422,7 @@ awful.rules.rules = {
 	-- 7 m
     { rule = { class = "Exaile"       }, properties = { tag = tags[ left_screen][7] } },
     { rule = { class = "Gimp"         }, properties = { tag = tags[ left_screen][7] } },
+    { rule = { class = "Calibre"      }, properties = { tag = tags[ left_screen][7] } },
 	-- 8 vm
     { rule = { class = "VirtualBox"   }, properties = { tag = tags[ left_screen][8] } },
 	-- 9 p2p
