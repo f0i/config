@@ -15,4 +15,4 @@ URxvt.saveLines: 10000
 *background: black
 *foreground: gold
 
-Xft.dpi: 100
+Xft.dpi: 96

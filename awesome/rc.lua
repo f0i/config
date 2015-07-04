@@ -404,6 +404,7 @@ awful.rules.rules = {
     { rule = { class = "Chromium"     }, properties = { tag = tags[ left_screen][2] } },
     { rule = { class = "Namoroka"     }, properties = { tag = tags[ left_screen][2] } },
     { rule = { class = "Epiphany"     }, properties = { tag = tags[right_screen][2] } },
+    { rule = { class = "Tor Browser"  }, properties = { tag = tags[ left_screen][2] } },
     { rule = { class = "Uzbl"         }, properties = { tag = tags[ left_screen][2] } },
 	-- 3 im
     { rule = { class = "Skype"        }, properties = { tag = tags[ left_screen][3] } },
