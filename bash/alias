@@ -25,6 +25,7 @@ alias ls_='ls "$_"'
 alias gqview_='gqview "$_"'
 alias find_='find "$_"'
 
+alias cd*='cd */'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -39,6 +40,7 @@ alias rm="echo -n Delete\! CTRL-C to cancel, enter to delete\!;read&&rm"
 alias whois='whois --verbose -H'
 alias man='man -a'
 alias mplayer-loud='mplayer -softvol -softvol-max 1000 −af volume=10.1:0'
+alias skype='apulse32 skype'
 
 #typos
 alias namp='nmap'
@@ -64,6 +66,8 @@ alias wtc="curl -s -L http://whatthecommit.com/index.txt"
 
 alias nocolor='sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"'
 alias dfh='df -H'
+
+alias scana4='scanimage -d plustek:libusb:$(lsusb | grep -i scan | sed "s/Bus.\([0-9]*\).Device.\([0-9]*\).*/\1:\2/") -x 215 -y 297 --format=jpg --resolution=300'
 
 # android
 alias android-devicemanager="android avd"
