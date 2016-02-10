@@ -53,6 +53,7 @@ x:
 	ln -si ${PWD}/x/xdefaults ~/.Xdefaults
 	ln -si ${PWD}/x/xinitrc ~/.xinitrc
 	- su -c "cp ${PWD}/x/input.conf /etc/X11/xorg.conf.d/20-input.conf"
+	- su -c "cp ${PWD}/x/synaptics.conf /etc/X11/xorg.conf.d/50-synaptics.conf"
 
 privacy:
 	- rm -ri ~/.adobe ~/.macromedia
