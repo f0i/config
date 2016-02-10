@@ -84,6 +84,7 @@
 :iabbrev jstag <script type="text/javascript" src=""></script><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 
 :iabbrev divtag <div>
+:iabbrev divclass <div class=""><Left><Left>
 :iabbrev divendtag </div>
 :iabbrev divblock <div></div><Left><Left><Left><Left><Left><Left>
 

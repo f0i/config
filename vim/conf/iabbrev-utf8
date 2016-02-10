@@ -16,5 +16,7 @@
 :iabbrev utfmale ♂
 :iabbrev utffemale ♀
 :iabbrev utfcube ⏣
+:iabbrev utfarr →
+:iabbrev utfrarr →
 
 " vim: set syntax=vim:
