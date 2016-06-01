@@ -506,9 +506,10 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- {{{ Autostart
-awful.util.spawn_with_shell("scim -d")
-awful.util.spawn_with_shell("urxvt")
-awful.util.spawn_with_shell("urxvt")
+--awful.util.spawn_with_shell("scim -d")
+--awful.util.spawn_with_shell(terminal)
+--awful.util.spawn_with_shell(terminal)
+--awful.util.spawn_with_shell("track auto")
 -- }}}
 
 -- }}}

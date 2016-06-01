@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #shortcuts
-alias v='vim'
+alias v='nvim'
+alias vim='nvim'
 alias g='git'
 alias m='mutt'
 alias l='ls'

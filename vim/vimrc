@@ -24,9 +24,8 @@ set shiftwidth=2
 set expandtab
 set smarttab
 
-" load plugins
-call pathogen#infect()
-
 for f in split(glob('~/.vim/f0i/*'), '\n')
   exe 'source' f
 endfor
+
+set ttymouse=sgr
