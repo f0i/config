@@ -16,6 +16,7 @@
   interactive = auto
 [push]
 	default = simple
+	followTags = true
 [github]
 	user = f0i
 [log]

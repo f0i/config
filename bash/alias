@@ -69,6 +69,7 @@ alias nocolor='sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"'
 alias dfh='df -H'
 
 alias scana4='scanimage -d plustek:libusb:$(lsusb | grep -i scan | sed "s/Bus.\([0-9]*\).Device.\([0-9]*\).*/\1:\2/") -x 215 -y 297 --format=jpg --resolution=300'
+alias scana5='scanimage -d plustek:libusb:$(lsusb | grep -i scan | sed "s/Bus.\([0-9]*\).Device.\([0-9]*\).*/\1:\2/") -x 215 -y 149 --format=jpg --resolution=300'
 
 # android
 alias android-devicemanager="android avd"
