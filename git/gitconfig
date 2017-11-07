@@ -3,7 +3,7 @@
 	name = f0i
 	signingkey = 19810A7F
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /home/ma/.gitignore
 [merge]
 	tool = vimdiff
 [commit]
@@ -43,3 +43,4 @@
   ca = commit -av
   stas = -c commit.gpgsign=false stash
   git = !git
+  pwd = rev-parse --show-prefix
