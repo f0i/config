@@ -25,7 +25,7 @@
   s = status
   p = diff
   b = branch
-  l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d %C(green)%an %C(cyan)%G?%Creset %s %C(green)%ad - %ar%Creset' --date=short
+  l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d %C(green)%an %C(cyan)%G?%Creset %s %C(green)%ad - %ar%Creset' --date=iso
 	la = !git l --all
   lf = !git l --stat
   laf = !git la --stat
