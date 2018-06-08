@@ -1,6 +1,6 @@
 # Install
 
-    git clone git@github.com:f0i/config config
+    git clone git@gitlab.com:f0i/config config
     cd $_
     make
 
