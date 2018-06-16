@@ -1,0 +1,17 @@
+image: base/archlinux:latest
+
+before_script:
+  - echo "Install deps"
+  - pacman -Sy --noconfirm
+  - pacman -S --noconfirm make wget
+   
+test1:
+  stage: test
+  script:
+    - make bash
+    - make vim
+    - make gitconfig
+    - make awesome
+    - make x
+    - make privacy
+    - make hosts
