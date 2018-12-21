@@ -44,6 +44,7 @@ awesome:
 	mkdir -p ~/.config/awesome/
 	ln -si ${PWD}/awesome/rc.lua ~/.config/awesome/rc.lua
 	ln -si ${PWD}/awesome/theme/ ~/.config/awesome/theme
+	ln -si ${PWD}/awesome/battery-widget.lua ~/.config/awesome/battery-widget.lua
 
 hosts:
 	cd ./hosts && ./get-hosts.sh
