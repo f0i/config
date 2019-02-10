@@ -28,7 +28,7 @@ PROMPT_COMMAND='_timer_stop'
 PS1='${_timer_show}:$?:\w\$ '
 
 # Add color
-if [[ "$HOSTNAME" == "mt" ]]
+if [[ "$HOSTNAME" == "mt" ]] || [[ "$HOSTNAME" == "md" ]]
 then
   # local user
   if [[ "$EUID" -eq "0" ]]

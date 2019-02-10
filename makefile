@@ -2,7 +2,19 @@
 
 #BUG: Symlink in folder when executing task multiple times
 
-all: bash vim git mutt awesome hosts x
+help:
+	# print help
+	cat makefile | grep "^[a-z]" -A 1
+
+setup:
+	# create link to config at ~/.config
+	- mv ~/.config ~/.config.back.$$(date +%F_%H-%M-%S)
+	ln -si ${PWD} ~/.config
+
+
+
+all: bash vim git mutt hosts x
+
 
 update: gitignore hosts
 
