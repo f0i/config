@@ -1,2 +1,6 @@
+# private settings
 bash/env
 bash/private
+
+# untracked
+ViertualBox

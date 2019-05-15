@@ -11,9 +11,14 @@ setup:
 	- mv ~/.config ~/.config.back.$$(date +%F_%H-%M-%S)
 	ln -si ${PWD} ~/.config
 
-
-
 all: bash vim git mutt hosts x
+	# run default tasks
+
+
+pwsafe:
+	# link pwsafe.dat
+	ln -si ${PWD}/pwsafe.dat ~/.pwsafe.dat
+
 
 
 update: gitignore hosts
