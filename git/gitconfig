@@ -44,3 +44,5 @@
   stas = -c commit.gpgsign=false stash
   git = !git
   pwd = rev-parse --show-prefix
+[gpg]
+  program = gpg2

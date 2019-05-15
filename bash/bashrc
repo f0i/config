@@ -1,6 +1,7 @@
 #!/bin/bash
 
 . ~/.alias
+. ~/.env
 
 function _timer_start {
   _timer=${_timer:-$SECONDS}
