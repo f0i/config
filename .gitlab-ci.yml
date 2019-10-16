@@ -1,9 +1,8 @@
-image: base/archlinux:latest
+image: alpine
 
 before_script:
   - echo "Install deps"
-  - pacman -Sy --noconfirm
-  - pacman -S --noconfirm make wget
+  - apk add --update make wget
    
 test1:
   stage: test
