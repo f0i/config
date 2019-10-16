@@ -1,16 +1,17 @@
-image: alpine
+image: debian
 
 before_script:
   - echo "Install deps"
-  - apk add --update make wget bash
+  - apt install -yqq --no-install-recommends make wget
+    
    
 test1:
   stage: test
   script:
-    - bash -c "make bash"
-    - bash -c "make vim"
-    - bash -c "make gitconfig"
-    - bash -c "make awesome"
-    - bash -c "make x"
-    - bash -c "make privacy"
-    - bash -c "make hosts"
+    - make bash
+    - make vim
+    - make gitconfig
+    - make awesome
+    - make x
+    - make privacy
+    - make hosts
