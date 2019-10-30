@@ -1,6 +1,6 @@
 [user]
 	email = f0i.git@projects.f0i.de
-	name = f0i
+	name = Martin Sigloch
 	signingkey = 19810A7F
 [core]
 	excludesfile = /home/ma/.gitignore

@@ -43,6 +43,7 @@ alias whois='whois --verbose -H'
 alias man='man -a'
 alias mplayer-loud='mplayer -softvol -softvol-max 1000 −af volume=10.1:0'
 alias skype='apulse32 skype'
+alias youtube-dl-audio="youtube-dl -f 'bestaudio[ext=m4a]'"
 
 #typos
 alias namp='nmap'
