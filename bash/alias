@@ -8,7 +8,7 @@ alias m='mutt'
 alias l='ls'
 alias ff='firefox'
 
-alias qr='ttyqr -b'
+#alias qr='ttyqr -b'
 alias vless='vimpager'
 
 alias cdback='cd "$OLDPWD"'
@@ -23,11 +23,13 @@ alias ._='. "$_"'
 alias ls_='ls "$_"'
 alias gqview_='gqview "$_"'
 alias find_='find "$_"'
+alias atom.='atom .'
 
 alias cd_='cd "$_"'
 alias cd-='cd "$OLDPWD"'
 alias cd*='cd */'
 alias cd.='cd "$PWD"'
+alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -42,6 +44,7 @@ alias rm="echo -n Delete\! CTRL-C to cancel, enter to delete\!;read&&rm"
 alias whois='whois --verbose -H'
 alias man='man -a'
 alias mplayer-loud='mplayer -softvol -softvol-max 1000 −af volume=10.1:0'
+alias music='mplayer -novideo ~/data/music/*'
 alias skype='apulse32 skype'
 alias youtube-dl-audio="youtube-dl -f 'bestaudio[ext=m4a]'"
 
@@ -50,8 +53,8 @@ alias namp='nmap'
 alias qw='wq'
 alias sl='ls'
 alias ks='ls'
-alias cd..='cd ..'
 alias mplayer*='mplayer *'
+alias gits='git s'
 
 #others
 alias presentation="$TERMINAL -fn 'xft:DejaVu Sans Mono-15'"
@@ -71,10 +74,10 @@ alias nocolor='sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"'
 alias dfh='df -H'
 alias dfh.='df -H .'
 
-alias scana4='scanimage -d plustek:libusb:$(lsusb | grep -i scan | sed "s/Bus.\([0-9]*\).Device.\([0-9]*\).*/\1:\2/") -x 215 -y 297 --format=jpg --resolution=300'
-alias scana5='scanimage -d plustek:libusb:$(lsusb | grep -i scan | sed "s/Bus.\([0-9]*\).Device.\([0-9]*\).*/\1:\2/") -x 215 -y 149 --format=jpg --resolution=300'
+alias scana4='scanimage -d plustek:libusb:$(lsusb | grep -i scan | sed "s/Bus.\([0-9]*\).Device.\([0-9]*\).*/\1:\2/") -x 215 -y 297 --format=jpeg --resolution=300'
+alias scana5='scanimage -d plustek:libusb:$(lsusb | grep -i scan | sed "s/Bus.\([0-9]*\).Device.\([0-9]*\).*/\1:\2/") -x 215 -y 149 --format=jpeg --resolution=300'
 
-alias scancard='scanimage -d plustek:libusb:$(lsusb | grep -i scan | sed "s/Bus.\([0-9]*\).Device.\([0-9]*\).*/\1:\2/") -x 90 -y 55 --format=jpg --resolution=300'
+alias scancard='scanimage -d plustek:libusb:$(lsusb | grep -i scan | sed "s/Bus.\([0-9]*\).Device.\([0-9]*\).*/\1:\2/") -x 90 -y 55 --format=jpeg --resolution=300'
 
 alias nohistory='unset HISTFILE && history -c && hide'
 
