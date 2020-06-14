@@ -6,8 +6,12 @@
 	excludesfile = /home/ma/.gitignore
 [merge]
 	tool = vimdiff
+[mergetool "vimdiff"]
+  cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [commit]
   gpgsign = true
+[diff]
+  noprefix = true
 [color]
 	status = auto
 	diff = auto
