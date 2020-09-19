@@ -1,0 +1,8 @@
+{
+  output eDP-1 position 0,1440
+  output DP-2 position 0,0
+}
+
+{
+  output eDP-1 position 0,0
+}
