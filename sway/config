@@ -20,7 +20,22 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu bemenu_run
+set $menu bemenu-run
+
+# Workspace names
+set $ws1 "1sh"
+set $ws2 "2www"
+set $ws3 "3im"
+set $ws4 "4file"
+set $ws5 "5ide"
+set $ws6 "6mail"
+set $ws7 "7m"
+set $ws8 "8vm"
+set $ws9 "9p2p"
+set $ws0 "10"
+
+set $laptop eDP-1
+set $monitor DP-2
 
 ### Output configuration
 #
@@ -37,10 +52,11 @@ set $menu bemenu_run
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+         timeout 290 'timeout 1 swaylock -f -c 000000' \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 360 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -59,12 +75,17 @@ set $menu bemenu_run
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
-input * {
+input "type:keyboard" {
     xkb_layout "de"
     xkb_variant "nodeadkeys"
 }
 
-input <identifier> xkb_model "pc101"
+input "type:touchpad" {
+  tap enabled
+  #natural_scroll enabled
+}
+
+
 
 ### Key bindings
 #
@@ -77,7 +98,7 @@ input <identifier> xkb_model "pc101"
     bindsym $mod+Shift+c kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+r exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -86,60 +107,73 @@ input <identifier> xkb_model "pc101"
     # mouse button for dragging.
     floating_modifier $mod normal
 
-    # Reload the configuration file
-    bindsym $mod+Shift+r reload
+    # Reload the configuration file ; restor monitor layout
+    bindsym $mod+Shift+r reload ; exec timeout 2 kanshi
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+Backspace exec swaynag -t warning \
+        -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' \
+        -b 'Yes, exit sway' 'swaymsg exit'
+
+    # Lock screen
+    bindsym $media+l exec swaylock -f -c 000000
+
 #
 # Moving around:
 #
     # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
+    bindsym $mod+$left  focus left
+    bindsym $mod+$down  focus down
+    bindsym $mod+$up    focus up
     bindsym $mod+$right focus right
-    # Or use $mod+[up|down|left|right]
-    #bindsym $mod+Left focus left
-    #bindsym $mod+Down focus down
-    #bindsym $mod+Up focus up
-    #bindsym $mod+Right focus right
+    # with arrow keys
+    bindsym $media+Left  focus left
+    bindsym $media+Down  focus down
+    bindsym $media+Up    focus up
+    bindsym $media+Right focus right
 
-    # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
+    # Move the focused window around
+    bindsym $mod+Shift+$left  move left
+    bindsym $mod+Shift+$down  move down
+    bindsym $mod+Shift+$up    move up
     bindsym $mod+Shift+$right move right
-    # Ditto, with arrow keys
-    bindsym $mod+Shift+Left move left
-    bindsym $mod+Shift+Down move down
-    bindsym $mod+Shift+Up move up
+    # with arrow keys
+    bindsym $mod+Shift+Left  move left
+    bindsym $mod+Shift+Down  move down
+    bindsym $mod+Shift+Up    move up
     bindsym $mod+Shift+Right move right
+
+    # Move the focused workspace around
+    bindsym $mod+$media+Left  move workspace to output left
+    bindsym $mod+$media+Down  move workspace to output down
+    bindsym $mod+$media+Up    move workspace to output up
+    bindsym $mod+$media+Right move workspace to output right
+
 #
 # Workspaces:
 #
     # Switch to workspace
-    bindsym $mod+1 workspace number 1
-    bindsym $mod+2 workspace number 2
-    bindsym $mod+3 workspace number 3
-    bindsym $mod+4 workspace number 4
-    bindsym $mod+5 workspace number 5
-    bindsym $mod+6 workspace number 6
-    bindsym $mod+7 workspace number 7
-    bindsym $mod+8 workspace number 8
-    bindsym $mod+9 workspace number 9
-    bindsym $mod+0 workspace number 10
+    bindsym $mod+1 workspace $ws1
+    bindsym $mod+2 workspace $ws2
+    bindsym $mod+3 workspace $ws3
+    bindsym $mod+4 workspace $ws4
+    bindsym $mod+5 workspace $ws5
+    bindsym $mod+6 workspace $ws6
+    bindsym $mod+7 workspace $ws7
+    bindsym $mod+8 workspace $ws8
+    bindsym $mod+9 workspace $ws9
+    bindsym $mod+0 workspace $ws0
     # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace number 1
-    bindsym $mod+Shift+2 move container to workspace number 2
-    bindsym $mod+Shift+3 move container to workspace number 3
-    bindsym $mod+Shift+4 move container to workspace number 4
-    bindsym $mod+Shift+5 move container to workspace number 5
-    bindsym $mod+Shift+6 move container to workspace number 6
-    bindsym $mod+Shift+7 move container to workspace number 7
-    bindsym $mod+Shift+8 move container to workspace number 8
-    bindsym $mod+Shift+9 move container to workspace number 9
-    bindsym $mod+Shift+0 move container to workspace number 10
+    bindsym $mod+Shift+1 move container to workspace $ws1
+    bindsym $mod+Shift+2 move container to workspace $ws2
+    bindsym $mod+Shift+3 move container to workspace $ws3
+    bindsym $mod+Shift+4 move container to workspace $ws4
+    bindsym $mod+Shift+5 move container to workspace $ws5
+    bindsym $mod+Shift+6 move container to workspace $ws6
+    bindsym $mod+Shift+7 move container to workspace $ws7
+    bindsym $mod+Shift+8 move container to workspace $ws8
+    bindsym $mod+Shift+9 move container to workspace $ws9
+    bindsym $mod+Shift+0 move container to workspace $ws0
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #
@@ -154,6 +188,7 @@ input <identifier> xkb_model "pc101"
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
+    bindsym $mod+m layout tabbed
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
@@ -187,22 +222,22 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+    bindsym $left  resize shrink width  10px
+    bindsym $down  resize grow   height 10px
+    bindsym $up    resize shrink height 10px
+    bindsym $right resize grow   width  10px
 
     # Ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+    bindsym Left  resize shrink width  10px
+    bindsym Down  resize grow   height 10px
+    bindsym Up    resize shrink height 10px
+    bindsym Right resize grow   width  10px
 
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $media+r mode "resize"
 
 #
 # Status Bar:
@@ -210,10 +245,13 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position top
+    strip_workspace_numbers yes
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %k:%M'; do sleep 15; done
+    #status_command while date +'%Y-%m-%d %k:%M'; do sleep 15; done
+    status_command while true; do /home/ma/bin/sway_status.sh; done
+
 
     colors {
         statusline #ffffff
@@ -222,4 +260,39 @@ bar {
     }
 }
 
-include /etc/sway/config.d/*
+
+# Workspace bindings
+
+workspace $ws1 output $laptop
+workspace $ws2 output $monitor
+workspace $ws3 output $laptop
+workspace $ws4 output $laptop
+workspace $ws5 output $monitor
+workspace $ws6 output $laptop
+workspace $ws7 output $monitor
+workspace $ws8 output $monitor
+workspace $ws9 output $laptop
+#workspace $ws0 output $monitor
+
+
+# Bind apps to workspaces
+
+# Browser
+assign [class="Firefox"] $ws2
+assign [class="Chromium-browser"] $ws2
+assign [class="Google-chrome"] $ws2
+
+# Notes
+assign [class="Joplin"] $ws3
+
+# VS code
+assign [class="Code"] $ws5
+# android-studio
+assign [class="jetbrains-studio"] $ws5
+
+# Mail
+assign [class="Thunderbird"] $ws6
+
+
+#include /etc/sway/config.d/*
+
